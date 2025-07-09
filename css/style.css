@@ -1,6 +1,5 @@
 /* ===== BASE STYLES ===== */
 body {
-  /* Paper texture */
   background-color: #fff;
   background-image: 
     linear-gradient(rgba(245,245,245,0.8) 1px, transparent 1px),
@@ -28,7 +27,7 @@ body {
 }
 
 .main-nav {
-  font-size: 0; /* Remove whitespace */
+  font-size: 0;
 }
 
 .main-nav a {
@@ -70,8 +69,5 @@ body {
   left: 0;
   right: 0;
   height: 1px;
-  background: linear-gradient(90deg, 
-    transparent 0%, 
-    rgba(0,0,0,0.1) 50%, 
-    transparent 100%);
+  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
 }
