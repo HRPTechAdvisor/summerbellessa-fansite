@@ -1,1 +1,70 @@
-body { font-family: Arial, sans-serif; }
+/* Base Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Karla', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+/* Header Styles */
+.main-header {
+    text-align: center;
+    padding: 30px 0 15px;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.site-title {
+    font-family: 'Playfair Display SC', serif;
+    font-size: 36px;
+    letter-spacing: 1px;
+    color: #333;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.main-nav {
+    font-size: 0; /* Remove whitespace between inline elements */
+}
+
+.main-nav a {
+    color: #6c96af;
+    text-decoration: none;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 8px;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #333;
+}
+
+.main-nav i.fa {
+    font-size: 16px;
+}
+
+.nav-divider {
+    color: #ccc;
+    font-size: 14px;
+    margin: 0 2px;
+}
+
+/* Content Styles */
+.content {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 0 20px;
+}
+
+/* Footer Styles */
+.site-footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 12px;
+    color: #999;
+    border-top: 1px solid #eee;
+}
