@@ -212,3 +212,16 @@ body {
     font-size: 12px;
   }
 }
+@media (max-width: 768px) {
+  .top-image-nav a {
+    width: 130px;
+    height: 90px;
+  }
+}
+
+@media (max-width: 480px) {
+  .top-image-nav a {
+    width: 110px;
+    height: 75px;
+  }
+}
