@@ -21,19 +21,27 @@ body {
 
 /* ===== TOP IMAGE NAV (7 images at top) ===== */
 .top-image-nav {
-  max-width: 1122px; /* 7 * 155px + 6 * 12px gap = 1122px total */
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 12px;
+  padding: 0 10px;
+  margin: 30px auto 15px;
+  max-width: 100%;
+  box-sizing: border-box;
+  scroll-snap-type: x mandatory;
 }
 
 .top-image-nav a {
-  flex: 0 0 155px;
+  flex: 0 0 auto;
+  width: 155px;
   height: 105px;
-}
-
-.top-image-nav a:hover,
-.top-image-nav a:focus {
-  transform: scale(1.1);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
-  outline: none;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  display: block;
+  scroll-snap-align: start;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .top-image-nav img {
@@ -43,6 +51,13 @@ body {
   display: block;
   pointer-events: none;
   border-radius: 6px;
+}
+
+.top-image-nav a:hover,
+.top-image-nav a:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  outline: none;
 }
 
 /* ===== HEADER ===== */
