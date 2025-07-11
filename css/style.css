@@ -13,12 +13,10 @@ body {
 /* ===== TOP IMAGE NAV (7 images at top) ===== */
 .top-image-nav {
   display: flex;
-  justify-content: center; /* center images */
-  align-items: center;
-  max-width: 1200px;
-  margin: 30px auto 15px;
-  padding: 0 10px;
+  justify-content: center;
   gap: 12px;
+  max-width: 100%;
+  padding: 0 10px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
@@ -28,13 +26,14 @@ body {
 }
 
 .top-image-nav a {
-  flex: 0 0 auto;
-  width: calc((100% - 72px) / 7);
+  flex: 0 0 auto;       /* no grow or shrink */
+  width: 130px;         /* fixed width */
+  height: 110px;        /* fixed height */
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .top-image-nav a:hover,
@@ -46,11 +45,11 @@ body {
 
 .top-image-nav img {
   width: 100%;
-  height: 110px;       /* Fixed height for uniformity */
-  object-fit: cover;   /* Crop image to fill */
+  height: 100%;        /* fill container */
+  object-fit: cover;   /* crop nicely */
   display: block;
-  border-radius: 6px;
   pointer-events: none;
+  border-radius: 6px;
 }
 
 /* ===== HEADER ===== */
@@ -174,7 +173,8 @@ body {
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
   .top-image-nav a {
-    width: 140px;
+    width: 110px;
+    height: 90px;
   }
   .hero-section {
     height: 300px;
@@ -189,7 +189,8 @@ body {
 
 @media (max-width: 480px) {
   .top-image-nav a {
-    width: 110px;
+    width: 90px;
+    height: 75px;
   }
   .site-title {
     font-size: 28px;
