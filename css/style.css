@@ -10,23 +10,31 @@ body {
   color: #2a2a2a;
 }
 
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
 /* ===== TOP IMAGE NAV (7 images at top) ===== */
 .top-image-nav {
   display: flex;
   justify-content: center;
   gap: 12px;
-  max-width: 946px;      /* 7 images * 130px + 6 gaps * 12px = 946px total */
+  max-width: 946px;  /* 7 images * 130px + 6 gaps * 12px */
   margin: 30px auto 15px;
-  padding: 0 10px;
+  padding: 0;
   overflow-x: hidden;
   flex-wrap: nowrap;
   box-sizing: border-box;
 }
 
 .top-image-nav a {
-  flex: 0 0 auto;
-  width: 130px;
-  height: 110px;
+  flex: 0 0 130px;  /* fixed width */
+  height: 110px;    /* fixed height */
   border-radius: 6px;
   overflow: hidden;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
