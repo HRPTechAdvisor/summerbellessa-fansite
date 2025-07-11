@@ -1,52 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Summer Bellessa Fan Site</title>
-  
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC|Karla:400,500&display=swap" rel="stylesheet" />
-  
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Summer Bellessa Fan Site</title>
+<link
+  href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+  rel="stylesheet"
+/>
+<style>
+  /* Reset */
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+  }
+  /* Center wrapper with fixed width like your 829px */
+  .wrapper {
+    width: 829px;
+    margin: 0 auto;
+  }
+  /* Top images row in a table cell, bottom aligned */
+  .top-images {
+    height: 375px;
+    vertical-align: bottom;
+    text-align: center;
+  }
+  .top-images img {
+    height: 60px;
+    margin: 0 5px;
+    vertical-align: bottom;
+  }
+  /* Navigation row styled as links with spaces */
+  .nav-links {
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    font-weight: normal;
+    padding: 10px 0;
+  }
+  /* Nav links with non-breaking spaces */
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  /* Social icons with font awesome */
+  .nav-links i {
+    font-size: 16px;
+    vertical-align: middle;
+  }
+</style>
 </head>
 <body>
-  <header class="main-header">
-    <nav class="top-image-nav" aria-label="Summer Bellessa gallery">
-      <a href="#"><img src="images/summer1.jpg" alt="Summer 1" /></a>
-      <a href="#"><img src="images/summer2.jpg" alt="Summer 2" /></a>
-      <a href="#"><img src="images/summer3.jpg" alt="Summer 3" /></a>
-      <a href="#"><img src="images/summer4.jpg" alt="Summer 4" /></a>
-      <a href="#"><img src="images/summer5.jpg" alt="Summer 5" /></a>
-      <a href="#"><img src="images/summer6.jpg" alt="Summer 6" /></a>
-      <a href="#"><img src="images/summer7.jpg" alt="Summer 7" /></a>
-    </nav>
-    <h1 class="site-title">Summer Bellessa</h1>
-    <nav class="main-nav">
-      <a href="#">Home</a>
-      <span class="nav-divider">|</span>
-      <a href="#">About</a>
-      <span class="nav-divider">|</span>
-      <a href="#">Gallery</a>
-      <span class="nav-divider">|</span>
-      <a href="#">Contact</a>
-    </nav>
-  </header>
 
-  <section class="hero-section">
-    <div class="hero-images">
-      <img src="images/summer1.jpg" alt="Hero Image 1" />
-      <img src="images/summer2.jpg" alt="Hero Image 2" />
-    </div>
-    <div class="overlay">
-      <h1>Welcome to the Fan Site</h1>
-      <p>Celebrating the talent and charm of Summer Bellessa</p>
-    </div>
-  </section>
+<center>
+  <table border="0" cellspacing="0" cellpadding="0" style="height:452px; width:829px;">
+    <tbody>
+      <tr>
+        <td style="height:6px; vertical-align: bottom;">
+          <p style="height:0;"></p>
+        </td>
+      </tr>
+      <tr>
+        <td class="top-images" style="vertical-align: bottom;">
+          <!-- Images summer1 to summer7 -->
+          <img src="images/summer1.jpg" alt="Summer 1" />
+          <img src="images/summer2.jpg" alt="Summer 2" />
+          <img src="images/summer3.jpg" alt="Summer 3" />
+          <img src="images/summer4.jpg" alt="Summer 4" />
+          <img src="images/summer5.jpg" alt="Summer 5" />
+          <img src="images/summer6.jpg" alt="Summer 6" />
+          <img src="images/summer7.jpg" alt="Summer 7" />
+        </td>
+      </tr>
+      <tr>
+        <td style="text-align: center; padding-top: 10px;">
+          <div class="nav-links">
+            <a href="https://yourfansite.com/information/">INFORMATION</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourfansite.com/career/">CAREER</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourfansite.com/media/">MEDIA</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourfansite.com/photos/">PHOTO GALLERY</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourfansite.com/site/">SITE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourfansite.com/online/">ONLINE</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourfansite.com/">HOME</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://twitter.com/yourhandle" target="_blank" rel="noopener" aria-label="Twitter"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://yourtumblr.tumblr.com" target="_blank" rel="noopener" aria-label="Tumblr"><i class="fa fa-tumblr"></i></a>
+          </div>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</center>
 
-  <footer class="site-footer">
-    &copy; 2025 Summer Bellessa Fan Site. All rights reserved.
-  </footer>
 </body>
 </html>
