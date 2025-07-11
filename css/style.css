@@ -1,125 +1,122 @@
-/* ===== BASE STYLES ===== */
-body {
-  background-color: #fff;
-  background-image: 
-    linear-gradient(rgba(245,245,245,0.8) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(245,245,245,0.8) 1px, transparent 1px);
-  background-size: 20px 20px;
-  margin: 0;
-  font-family: 'Karla', sans-serif;
-  color: #2a2a2a;
-}
-
 /* ===== TOP IMAGE NAV (7 images at top) ===== */
 .top-image-nav {
   display: flex;
-  justify-content: space-between;
+  justify-content: center; /* center images like Sydney's */
   align-items: center;
   max-width: 1200px;
-  margin: 20px auto 10px;
+  margin: 30px auto 15px; /* a bit more top margin */
   padding: 0 10px;
+  gap: 12px; /* better spacing between images */
+  overflow-x: auto; /* horizontal scroll on small screens */
+  -webkit-overflow-scrolling: touch; /* smooth scroll on iOS */
+  scrollbar-width: none; /* hide scrollbar Firefox */
+}
+.top-image-nav::-webkit-scrollbar {
+  display: none; /* hide scrollbar Chrome, Safari */
 }
 
 .top-image-nav a {
-  flex: 1;
-  margin: 0 6px;
-  display: block;
-  border-radius: 4px;
+  flex: 0 0 auto; /* prevent shrinking */
+  width: calc((100% - 72px) / 7); /* 7 images with 12px gaps between */
+  border-radius: 6px;
   overflow: hidden;
-  transition: transform 0.3s ease;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 .top-image-nav a:hover,
 .top-image-nav a:focus {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
   outline: none;
 }
 
 .top-image-nav img {
   width: 100%;
-  height: 100px; /* fixed height for consistency */
+  height: 110px; /* slightly taller like Sydney's */
   object-fit: cover;
   display: block;
+  border-radius: 6px;
+  pointer-events: none;
 }
 
 /* ===== HEADER ===== */
 .main-header {
-  text-align: center;
-  padding: 12px 0 12px;
-  background-color: #fff;
-  border-bottom: 1px solid #f0f0f0;
   max-width: 1200px;
-  margin: 0 auto 20px;
+  margin: 0 auto 30px;
+  background: transparent; /* Sydney site has no solid header bg */
+  padding: 0 20px 20px;
+  text-align: center;
+  border-bottom: none; /* no border */
 }
 
 .site-title {
   font-family: 'Playfair Display SC', serif;
-  font-size: 34px;
-  letter-spacing: 0.5px;
-  color: #2a2a2a;
-  margin: 12px 0;
+  font-size: 36px;
+  color: #1e1e1e;
+  letter-spacing: 2px;
+  margin: 0 0 18px;
   text-transform: uppercase;
+  font-weight: 900;
+  user-select: none;
 }
 
+/* ===== NAVIGATION ===== */
 .main-nav {
   font-size: 0;
+  margin-bottom: 40px;
 }
 
 .main-nav a {
-  color: #6c96af;
-  text-decoration: none;
-  font-size: 13px;
-  font-weight: 500;
+  font-family: 'Karla', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #7b8db0; /* a cooler blue */
   text-transform: uppercase;
-  letter-spacing: 1px;
-  margin: 0 8px;
+  letter-spacing: 2px;
+  margin: 0 15px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
   display: inline-block;
-  font-size: 13px; /* reset */
-  transition: all 0.2s ease;
 }
 
 .main-nav a:hover,
 .main-nav a:focus {
-  color: #333;
-  text-decoration: underline;
-  text-underline-offset: 3px;
+  color: #2b2b2b;
+  border-bottom-color: #2b2b2b;
   outline: none;
 }
 
 .nav-divider {
-  color: #e0e0e0;
-  font-size: 14px;
-  margin: 0 2px;
-  user-select: none;
+  display: none; /* Sydney site doesn’t use dividers */
 }
 
 /* ===== HERO SECTION ===== */
 .hero-section {
-  position: relative;
-  width: 100%;
   max-width: 1200px;
-  height: 500px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
+  position: relative;
+  height: 460px; /* Sydney’s hero is a bit shorter */
+  border-radius: 10px;
   overflow: hidden;
-  border-radius: 8px;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 .hero-images {
   display: flex;
-  width: 100%;
   height: 100%;
 }
 
 .hero-images img {
   flex: 1;
   object-fit: cover;
-  height: 100%;
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
 }
 
 .hero-images img:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
 }
 
 .overlay {
@@ -127,64 +124,49 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   color: white;
-  text-shadow: 0 0 10px rgba(0,0,0,0.8);
+  text-shadow: 0 0 20px rgba(0,0,0,0.9);
   pointer-events: none;
+  text-align: center;
+  max-width: 80%;
 }
 
 .overlay h1 {
-  font-size: 48px;
-  margin-bottom: 10px;
+  font-family: 'Playfair Display SC', serif;
+  font-size: 56px;
+  margin-bottom: 12px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  user-select: none;
 }
 
 .overlay p {
-  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+  font-size: 22px;
+  letter-spacing: 1.2px;
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
-  position: relative;
-  text-align: center;
-  padding: 25px 0 15px;
-  font-size: 11px;
-  color: #999;
   max-width: 1200px;
-  margin: 0 auto;
-}
-
-.site-footer::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+  margin: 0 auto 40px;
+  font-family: 'Karla', sans-serif;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  user-select: none;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
-  .top-image-nav {
-    flex-wrap: nowrap;
-    overflow-x: auto;
-    padding: 0 5px;
-  }
   .top-image-nav a {
-    flex: 0 0 auto;
-    width: 100px;
-    margin: 0 5px;
+    width: 140px;
   }
-
-  .hero-images {
-    flex-direction: column;
-    height: auto;
+  .hero-section {
+    height: 300px;
   }
-  .hero-images img {
-    width: 100%;
-    height: auto;
-  }
-
   .overlay h1 {
     font-size: 32px;
   }
@@ -195,9 +177,13 @@ body {
 
 @media (max-width: 480px) {
   .top-image-nav a {
-    width: 80px;
+    width: 110px;
   }
   .site-title {
     font-size: 28px;
+  }
+  .main-nav a {
+    margin: 0 8px;
+    font-size: 12px;
   }
 }
