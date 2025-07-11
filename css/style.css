@@ -2,30 +2,42 @@
 body {
   margin: 0;
   font-family: 'Karla', sans-serif;
-  background: #fff url('') repeat;
+  background-color: #fff;
   color: #2a2a2a;
 }
 
-/* ===== TOP IMAGE ROW (Sydney style) ===== */
+/* ===== TOP IMAGE NAV ===== */
 .top-image-nav {
   display: flex;
-  overflow-x: auto;
-  white-space: nowrap;
-  margin: 20px auto;
-  padding: 0 10px;
+  justify-content: center;
   gap: 12px;
-  scroll-snap-type: x mandatory;
+  max-width: 1080px;
+  margin: 30px auto 20px;
+  padding: 0 10px;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+
+.top-image-nav::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
 }
 
 .top-image-nav a {
-  flex: 0 0 auto;
-  width: 155px;
-  height: 105px;
-  border-radius: 4px;
+  flex: 0 0 150px;
+  height: 100px;
+  border-radius: 6px;
   overflow: hidden;
-  scroll-snap-align: start;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  scroll-snap-align: start;
+}
+
+.top-image-nav a:hover,
+.top-image-nav a:focus {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  outline: none;
 }
 
 .top-image-nav img {
@@ -33,48 +45,63 @@ body {
   height: 100%;
   object-fit: cover;
   display: block;
+  pointer-events: none;
+  border-radius: 6px;
 }
-
-.top-image-nav a:hover { transform: scale(1.05); }
 
 /* ===== HEADER ===== */
 .main-header {
   text-align: center;
   padding-bottom: 20px;
-  border-bottom: solid 1px #e0e0e0;
+  border-bottom: 1px solid #e0e0e0;
+  max-width: 1080px;
+  margin: 0 auto;
 }
 
 .site-title {
   font-family: 'Playfair Display SC', serif;
   font-size: 32px;
   text-transform: uppercase;
-  margin: 10px 0;
+  margin: 12px 0 8px;
+  font-weight: 900;
+  letter-spacing: 2px;
 }
 
 .main-nav {
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 .main-nav a {
-  font-size: 13px;
-  letter-spacing: 1px;
-  margin: 0 8px;
+  font-size: 14px;
   color: #6c96af;
   text-decoration: none;
   text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 10px;
+  transition: color 0.3s ease;
 }
 
-.main-nav a:hover { color: #333; text-decoration: underline; }
+.main-nav a:hover,
+.main-nav a:focus {
+  color: #333;
+  text-decoration: underline;
+  outline: none;
+}
 
-.nav-divider { margin: 0 4px; color: #e0e0e0; }
+.nav-divider {
+  color: #e0e0e0;
+}
 
-/* ===== HERO ===== */
+/* ===== HERO SECTION ===== */
 .hero-section {
   position: relative;
-  overflow: hidden;
+  max-width: 1080px;
   height: 400px;
-  margin: 30px auto;
-  max-width: 100%;
+  margin: 30px auto 60px;
+  display: flex;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.2);
 }
 
 .hero-images {
@@ -86,38 +113,82 @@ body {
 .hero-images img {
   flex: 1;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.hero-images img:hover {
+  transform: scale(1.1);
 }
 
 .overlay {
   position: absolute;
-  top: 50%; left: 50%;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
   text-shadow: 0 0 10px rgba(0,0,0,0.7);
+  pointer-events: none;
+  max-width: 80%;
+}
+
+.overlay h1 {
+  font-family: 'Playfair Display SC', serif;
+  font-size: 48px;
+  font-weight: 900;
+  letter-spacing: 3px;
+  margin-bottom: 10px;
+}
+
+.overlay p {
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
+  letter-spacing: 1.2px;
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
+  max-width: 1080px;
+  margin: 0 auto 40px;
+  font-family: 'Karla', sans-serif;
   font-size: 12px;
-  text-align: center;
-  padding: 15px;
-  border-top: 1px solid #f0f0f0;
   color: #999;
+  text-align: center;
+  user-select: none;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
+  .top-image-nav {
+    gap: 10px;
+  }
   .top-image-nav a {
-    width: 120px;
-    height: 80px;
+    flex: 0 0 120px;
+    height: 90px;
+  }
+  .hero-section {
+    height: 300px;
+  }
+  .overlay h1 {
+    font-size: 32px;
+  }
+  .overlay p {
+    font-size: 16px;
   }
 }
 
 @media (max-width: 480px) {
   .top-image-nav a {
-    width: 100px;
-    height: 70px;
+    flex: 0 0 100px;
+    height: 75px;
   }
-  .site-title { font-size: 28px; }
+  .site-title {
+    font-size: 28px;
+  }
+  .main-nav a {
+    font-size: 12px;
+    margin: 0 6px;
+  }
 }
